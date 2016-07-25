@@ -1,0 +1,81 @@
+<!DOCTYPE html>  
+<html>
+	<head>  
+		<title>Interactive Video Player</title> 
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+	</head>
+	<body> 
+
+		<div id="player">
+				<div id="screen">
+					<img id="screen-button" src="img/play.png" alt="The image can't load">
+				</div>
+				<video id="video" poster="img/thumbnail.png">
+					<source src="video/video.mp4">
+					<source src="video/video.ogg">
+					It seems your browser doesn't support the HTML5 video tag. Please update it!
+				</video> 
+
+			<div id="pbar-container">
+				<div id="pbar"></div>
+			</div>
+
+			<div id="buttons-container"> 
+				<img id="play-button" src="img/play.png" alt="The image can't load">
+				<div id="time-field">
+					0:00 / 0:00
+				</div>
+				<select id="speedList">
+					<option value="1">Speed</option>
+					<option value=".5">.5</option>
+					<option value="1">Normal</option>
+					<option value="1.5">1.5</option>
+					<option value="2">2</option>
+				</select>
+				<button id="bwd"><img src="img/arrow-left.png" id="arrowLeft" alt="The image can't load"></button>
+				<button id="fwd"><img src="img/arrow-right.png" id="arrowRight" alt="The image can't load"></button>
+				<button id="fullscreen"><img id="fullscreen-button" src="img/fullscreen.png" alt="The image can't load"></button>
+				<div id="CC"><img class="ccOff" src="img/CC.png" alt="The image can't load"></div>
+				<div id="sbar-container">
+				<input id="soundSlider" type="range" min="0" max="1" step="0.01" value="1">
+				</div>
+				<img id="sound-button" src="img/sound.png" alt="The image can't load">
+		</div>
+
+		</div>
+		<div id="captions">
+				<p>
+					<span class="spans" data-start-time="00:00">Now that we've looked at the architecture of the internet, let's see how you might</span>
+					<span class="spans" data-start-time="00:04">connect your personal devices to the internet inside your house.</span>
+					<span class="spans" data-start-time="00:07">Well there are many ways to connect to the internet, and</span>
+					<span class="spans" data-start-time="00:11">most often people connect wirelessly.</span>
+					<span class="spans" data-start-time="00:13">Let's look at an example of how you can connect to the internet.</span>
+				</p>
+				<p>
+					<span class="spans" data-start-time="00:17">If you live in a city or a town, you probably have a coaxial cable for</span>
+					<span class="spans" data-start-time="00:22">cable Internet, or a phone line if you have DSL, running to the outside of</span>
+					<span class="spans" data-start-time="00:26">your house, that connects you to the Internet Service Provider, or ISP.</span>
+				</p>
+				<p>
+					<span class="spans" data-start-time="00:32">If you live far out in the country, you'll more likely have</span>
+					<span class="spans" data-start-time="00:34">a dish outside your house, connecting you wirelessly to your closest ISP, or</span>
+					<span class="spans" data-start-time="00:39">you might also use the telephone system.</span>
+				</p>
+				<p>
+					<span class="spans" data-start-time="00:42">Whether a wire comes straight from the ISP hookup outside your house, or</span>
+					<span class="spans" data-start-time="00:46">it travels over radio waves from your roof,</span>
+					<span class="spans" data-start-time="00:49">the first stop a wire will make once inside your house, is at your modem.</span>
+				</p>
+				<p>
+					<span class="spans" data-start-time="00:53">A modem is what connects the internet to your network at home.</span>
+					<span class="spans" data-start-time="00:57">A few common residential modems are DSL or</span>
+				</p>
+		</div>		
+			<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+			<script type="text/javascript" src="js/player.js"></script>
+	</body>
+</html>
